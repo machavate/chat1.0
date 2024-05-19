@@ -5,8 +5,9 @@ import { initialProfile } from "@/lib/initial-profile";
 import { db } from "@/lib/db";
 import { InitialModal } from "@/components/modals/initial-modal";
 
+
 export default async function SetupPage() {
-  const profile = await initialProfile();
+  const profile = await initialProfile(); // Await the function call
 
   const server = await db.server.findFirst({
     where: {
